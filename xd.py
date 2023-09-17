@@ -187,7 +187,7 @@ def Main_Menu():
 		if Awais =='1':
 			file_crack()
 		elif Awais =='2':
-			gmail()
+			r_crack()
 			Main_Awais()
 		elif Awais =='0':
 			exit(' Thanks For Using our tool ')
