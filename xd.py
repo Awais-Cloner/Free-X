@@ -249,25 +249,22 @@ def file_crack():
 	print(' [+] Total OK | CP: '+str(len(oks))+ ' | ' +str(len(cps)))
 	linex()
 	input('\033[1;32m [*] Press enter to back \033[1;37m')
-	os.system('./xd')
+	os.system('python Awais.py')
 
 def r_crack():
-    clear()
-    print(' [1] RANOM Method 1 ')
-    print(' [2] RANOM Method 2 ')
-    print(' [0] Back To Menu ')
-    linex()
-    crk = input(' [+] Select Option:\33[1;37m ')
-    if crk == '1':
-        random_gmail()
-    elif crk == '2':
-        r_crack2()
-    elif crk == '0':
-        Main_Awais()  # You should define what Main_Awais() does
-    else:
-        print('\n  [+] Select a valid option\033[1;37m ')
-        time.sleep(1.5)
-     
+	clear()
+	print(' [1] RANOM Method 1 ')
+	print(' [2] RANOM Method 2 ')
+	print(' [0] Back To Menu ')
+	linex()
+	crk=input(' [+] Select Option:\33[1;37m ')
+	if crk =='1':
+		r_crack1()
+	if crk =='2':
+		r_crack2()
+	else:
+		print('\n  [+] Select valid option\033[1;37m ');time.sleep(1.5);Main_Awais()
+
 def rd1(ids,passlist):
 	try:
 		global ok,loop,sim_id
@@ -465,7 +462,7 @@ def api2(ids,names,passlist):
 		pass
                 
 
-def r_crack():
+def r_crack1():
 	clear()
 	print(' [1] Pakistan Random ')
 	print(' [2] India Random ')
