@@ -2,6 +2,7 @@
 #!/usr/bin/python3
 #!/coding by Mahadi x Sefat
 import os
+import marshal
 print('CHECKING FOR UPDATES')
 try:
 	import requests
